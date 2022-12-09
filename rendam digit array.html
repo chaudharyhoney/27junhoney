@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 720
+        // let test = [5, 2, -3, 2, 7, 4]
+
+        // test.every(function (element, index) {
+        //     // compare if the element matches in the same index
+        //     console.log("test.every",element);
+        //     // return element === arrTwo[index];
+        // });
+        // for (let i = 0; i < test.length; i++) {
+        //     var parent = test[i]
+        //     for (let j = 0; i < test.length; i++) {
+        //         // console.log(test[i]);
+        //         // console.log("parent", parent);
+        //         //     if(j[i]+test[i]==11){
+        //         //      console.log(test[i])
+        //         // }
+        //     }
+        // }
+        // var ret = [];
+
+        // var input = [2, 3, 8, 1, 4, 5, 9, 7, 6];
+        var input = [4, 2, -7, 2, 4, 9, 2];
+
+        var output = [];
+        var output2 = [];
+        var inserted;
+        for (var i = 0, ii = input.length; i < ii; i++) {
+            inserted = false;
+            for (var j = 0, jj = output.length; j < jj; j++) {
+                console.log(output);
+                if ((input[i] + output[j]) == 11) {
+                    output2.push([input[i],output[j]])
+                    inserted = true;
+                    break;
+                }
+            }
+
+            if (!inserted)
+                output.push(input[i])
+            }
+
+        // console.log(output);
+        console.log("output2",output2);
+    </script>
+</body>
+
+</html>
