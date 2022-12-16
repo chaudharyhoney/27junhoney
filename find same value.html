@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var ar1 = [1, 1.1, 2, 3, 35, 45, 60, 70, 55, 80];
+      var ar2 = [2, 3, 4, 5, 70, 55, 80, 90, "10", "3"];
+      var ar3 = [1, 2.1, 35, 45, 60, "70.55", 80, 3, 5];
+      ///////////////
+
+
+      var output = ar1.filter((data) => ar2.includes(data));
+      console.log(output);
+      var commonelement = output.filter((data1) => ar3.includes(data1));
+      console.log(commonelement);
+
+
+      ////////////////////////
+
+
+      var unique1 = ar1.filter((ud) => ar2.indexOf(ud) === -1);
+      var unique2 = ar2.filter((ud) => ar1.indexOf(ud) === -1);
+
+      var unique = unique1.concat(unique2);
+      var uniq1 = ar2.filter((ud) => ar3.indexOf(ud) === -1);
+      var uniq2 = ar3.filter((ud) => ar1.indexOf(ud) === -1);
+
+      var uniq = uniq1.concat(uniq2); 
+
+      console.log(uniq ,unique);
+    </script>
+  </body>
+</html>
